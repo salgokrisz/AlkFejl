@@ -1,6 +1,6 @@
 # Alkalmazások fejlesztése - Beadandó
 ## Dokumentáció
-### Pleszkán Tamás Cuksy Boi, Hajdú Márk Horny Boi, Salgó Krisztián Their Boi
+### Pleszkán Tamás, Hajdú Márk, Salgó Krisztián
 
 ## 0. Bevezető
 A program egy egyszerű családi TODO alkalmazás lesz, ahol létre lehet hozni különböző TODO listákat amit a családtagok megtekinthetnek és szerkeszthetnek
