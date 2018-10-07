@@ -38,3 +38,32 @@ A program egy egyszerű családi TODO alkalmazás lesz, ahol létre lehet hozni 
 3. Az aktuális megnyitott listát szerkesztheti, amennyiben ő hozta létre vagy a Családfőtől kapott rá jogot
 4. A listában a változtatásokat elmentheti vagy visszavonhatja
 5. A TODO lista egyes pontjait elvégezettnek jelölheti
+
+
+## 2. Tervezés
+
+### Oldaltérkép
+
+- Bejelentkezési oldal/Regisztrációs oldal
+- Főoldal
+    - Családok megjelenítése/menedzselése
+    - Általunk létrehozott listák megjelentítése
+    - Listák megjelenítése amikben bennevagyunk
+    - Kijelentkezés
+- Lista nézet
+    - Lista szerkesztése
+    - TDOD pont elvégzettnek jelölése
+    
+### Végpontok
+---
+### Kapcsolati diagram
+----------------
+### Képernyőtervek
+---
+
+## Implementáció
+---
+
+
+## Tesztelés
+---
