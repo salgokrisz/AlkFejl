@@ -33,7 +33,7 @@ A program egy egyszerű családi TODO alkalmazás lesz, ahol létre lehet hozni 
 
 **Folyamatok**
 
-1. Bejelentkezik a felhsználó
+1. Bejelentkezik a felhasználó
 2. Megtekintheti az eddig létrehozott TODO listáit
 3. Az aktuális megnyitott listát szerkesztheti, amennyiben ő hozta létre vagy a Családfőtől kapott rá jogot
 4. A listában a változtatásokat elmentheti vagy visszavonhatja
