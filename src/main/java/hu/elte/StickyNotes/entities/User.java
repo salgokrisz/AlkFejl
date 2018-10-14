@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 /**
@@ -30,6 +31,7 @@ public class User {
     @Column(nullable = false)
     private String username;
     
+    @Getter
     @Column(nullable = false)
     private String password;
     
@@ -44,7 +46,7 @@ public class User {
         ROLE_GUEST, ROLE_USER, ROLE_ADMIN
     }
     
-//    @OneToMany(mappedBy = "user")
-//    @JsonIgnore
-//    private List<ToDoList> todos;
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<ToDoList> todos;
 }
