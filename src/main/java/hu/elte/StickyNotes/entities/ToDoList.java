@@ -25,11 +25,6 @@ public class ToDoList {
 	@Column(nullable = false)
 	@NotNull
 	private String name;
-    
-	@Column(nullable = false)
-	@NotNull
-	private String text;
-	
 	
 	@Column(nullable = false)
 	@NotNull
@@ -40,7 +35,6 @@ public class ToDoList {
 	public ToDoList(String author, String name, String text){
 		this.author = author;
 		this.name = name;
-		this.text = text;
 	}
 	
 	
