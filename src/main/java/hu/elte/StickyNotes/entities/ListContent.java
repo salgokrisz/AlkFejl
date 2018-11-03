@@ -44,5 +44,5 @@ public class ListContent {
     @ManyToOne
     @JoinColumn
     @JsonIgnore
-    private ToDoList toDoList;
+    private ToDoList todolist;
 }

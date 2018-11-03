@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package hu.elte.StickyNotes.controllers;
 
 import java.util.Optional;
@@ -17,20 +12,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 import hu.elte.StickyNotes.entities.ToDoList;
 import hu.elte.StickyNotes.repositories.ToDoListRepository;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 
 /**
  * @author Salgo Krisztian, Hajdu Mark, Pleszkan Tamas
  */
 
-
-@RestContoller
-@RequestMapping("/todo");
+@RestController
+@RequestMapping("/todo")
 public class ToDoListContoller {
     @Autowired
     private ToDoListRepository toDoListRepository;
     
     @GetMapping("")
-    public ResponseEntity<Iterable<toDoList>> getAll() {
+    public ResponseEntity<Iterable<ToDoList>> getAll() {
         return ResponseEntity.ok(toDoListRepository.findAll());
     }
     

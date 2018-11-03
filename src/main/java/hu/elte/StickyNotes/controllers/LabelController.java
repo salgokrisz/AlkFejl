@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Salgo Krisztian, Hajdu Mark, Pleszkan Tamas
  */
 @RestController
-@RequestMapping("/list")
+@RequestMapping("/label")
 public class LabelController {
     
     @Autowired
