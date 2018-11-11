@@ -25,7 +25,8 @@ A program egy egyszerű családi TODO alkalmazás lesz, ahol létre lehet hozni 
 - Jelszóval védett adatok
 
 ### Használatieset-modell
-(https://github.com/salgokrisz/AlkFejl/blob/master/AlkfejlUSECASE.png)
+(images/AlkfejlUSECASE.png)
+
 **Szerepek**
 - Guest
 - Bejelentkezett felhasználó
