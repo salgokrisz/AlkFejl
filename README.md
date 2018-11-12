@@ -66,26 +66,26 @@ A program egy egyszerű családi TODO alkalmazás lesz, ahol létre lehet hozni 
 ![osztálydiagram](images/AlkfejlUML.png)
 
 ### Végpontok
--users
-	-@Postmapping(„register”):  Új felhasználó regisztrálása az adatb.-be.
-	-@Postmapping(„login”): Bejelentkezés.
--labels
-	-@Getmapping(„”): Minden cimke lekérdezése
-	-@GetMapping(„/{id}”): Cimkék lekérdezése azonosító alapján.
-	-@PostMapping(„”): Minden cimke elmentése.
-	-@PutMapping(„/{id}”): Bizonyos azonosítóval rendelkező cimke elmentése.
-	-@DeleteMapping(„/{id}”):Bizonyos azonosítóval rendelkező cimke törlése.
--list contents
-	-@GetMapping(„”): Minden lista tartalom lekérdezése.
-	-@GetMapping(„/{id}”): Bizonyos azonosítóval rendelkező lista tartalom lekérdezése.
-	-@PutMapping(„/{id}”):Bizonyos azonosítóval rendelkező lista tartalom mentése.
-	-@DeleteMapping(„/{id}”):Bizonyos azonosítóval rendelkező lista tartalom törlése.
--todo lists
-	-@GetMapping(„”): Minden todo lista lekérdezése.
-	-@GetMapping(„/{id}”): Bizonyos azonosítóval rendelkező todo lista törlése
-	-@PostMapping(„”):Minden todo lista mentése.
-	-@PutMapping(„/{id}”):Bizonyos azonosítóal rendelkező todo lista mentése.
-	-@DeleteMapping(„/{id}”):Bizonyos azonosítóval rendelkező todo lista törlése.
+- users
+	- @Postmapping(„register”):  Új felhasználó regisztrálása az adatb.-be.
+	- @Postmapping(„login”): Bejelentkezés.
+- labels
+	- @Getmapping(„”): Minden cimke lekérdezése
+	- @GetMapping(„/{id}”): Cimkék lekérdezése azonosító alapján.
+	- @PostMapping(„”): Minden cimke elmentése.
+	- @PutMapping(„/{id}”): Bizonyos azonosítóval rendelkező cimke elmentése.
+	- @DeleteMapping(„/{id}”):Bizonyos azonosítóval rendelkező cimke törlése.
+- list contents
+	- @GetMapping(„”): Minden lista tartalom lekérdezése.
+	- @GetMapping(„/{id}”): Bizonyos azonosítóval rendelkező lista tartalom lekérdezése.
+	- @PutMapping(„/{id}”):Bizonyos azonosítóval rendelkező lista tartalom mentése.
+	- @DeleteMapping(„/{id}”):Bizonyos azonosítóval rendelkező lista tartalom törlése.
+- todo lists
+	- @GetMapping(„”): Minden todo lista lekérdezése.
+	- @GetMapping(„/{id}”): Bizonyos azonosítóval rendelkező todo lista törlése
+	- @PostMapping(„”):Minden todo lista mentése.
+	- @PutMapping(„/{id}”):Bizonyos azonosítóal rendelkező todo lista mentése.
+	- @DeleteMapping(„/{id}”):Bizonyos azonosítóval rendelkező todo lista törlése.
 
 
 ### Képernyőtervek
