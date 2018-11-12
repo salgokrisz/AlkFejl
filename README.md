@@ -26,7 +26,7 @@ A program egy egyszerű családi TODO alkalmazás lesz, ahol létre lehet hozni 
 
 ### Használatieset-modell
 
-(images/AlkfejlUSECASE.png)
+![használateset diagram](images/AlkfejlUSECASE.png)
 
 **Szerepek**
 - Guest
@@ -57,14 +57,13 @@ A program egy egyszerű családi TODO alkalmazás lesz, ahol létre lehet hozni 
     - Lista szerkesztése
     - TDOD pont elvégzettnek jelölése
 
-### Adatbázis terv
-(images/alkfejldatab.png)
+![adatbázis terv](images/alkfejldatab.png)
 
 ### Könyvtárstruktúra
-(images/alkfejlstrukt.png)
+![könyvtár struktúra](images/alkfejlstrukt.png)
 
 ### Osztálydiagram
-(images/AlkfejlUML.png)
+![osztálydiagram](images/AlkfejlUML.png)
 
 ### Végpontok
 ---
