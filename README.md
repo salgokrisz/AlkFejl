@@ -60,7 +60,7 @@ A program egy egyszerű családi TODO alkalmazás lesz, ahol létre lehet hozni 
 ![adatbázis terv](images/alkfejldatab.png)
 
 ### Könyvtárstruktúra
-![könyvtár struktúra](images/alkfejkstrukt.png)
+![könyvtár struktúra](images/alkfejktstrukt.png)
 
 ### Osztálydiagram
 ![osztálydiagram](images/AlkfejlUML.png)
