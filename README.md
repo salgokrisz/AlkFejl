@@ -17,7 +17,7 @@ A program egy egyszerű családi TODO alkalmazás lesz, ahol létre lehet hozni 
     - Listák szerkesztése (Ha van joga hozzá)
 - Családi admin jogok
     - Szerkesztésre jogosultság adás
-    - TODO listák törlése (Done állapot beállítása)
+    - TODO listák törlése
 
 ### Nem funkciunális követelmények
 
