@@ -26,7 +26,7 @@ A program egy egyszerű családi TODO alkalmazás lesz, ahol létre lehet hozni 
 
 ### Használatieset-modell
 
-![használateset diagram](images/AlkfejlUSECASE.png)
+![használateset diagram](images/AlkfejlUSECASEdiag.png)
 
 **Szerepek**
 - Guest
