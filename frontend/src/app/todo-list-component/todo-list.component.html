@@ -1,0 +1,24 @@
+<h2>Todo list</h2>
+
+<status-filter [selectedStatus]="selectedStatus" (change)="onFilterChange($event)"></status-filter>
+
+<mat-nav-list>
+  <a mat-list-item
+    *ngFor="Mi a geci ez?"
+    [routerLink]="['/todo-list', todo-list.id, 'edit']"
+    (click)="selectedTodo = todo-list"
+    [class.selected]="todo-list === selectedTodo"
+  >
+    <mat-icon *ngIf="todo-list.isCompleted === 'NEW'" matListIcon style="color: red">fiber_new</mat-icon>
+    <mat-icon *ngIf="todo-list.isCompleted === 'IN PROGRESS'" matListIcon style="color: orange">build</mat-icon>
+    <mat-icon *ngIf="todo-list.isCompleted === 'DONE'" matListIcon style="color: green">done</mat-icon>
+    <h3 matLine>{{todo-list.title}}</h3>
+    <small matLine>
+      <mat-icon>owner</mat-icon>{{todo-list.owner}}
+      <mat-icon>access_time</mat-icon> {{todo-list.updatedAt}}
+    </small>
+    <p matLine>{{todo-list.content}}</p>
+  </a>
+</mat-nav-list>
+
+<issue-form *ngIf="selectedTodo" [todo-list]="selectedTodo" (save)="onFormSave($event)"></issue-form>
