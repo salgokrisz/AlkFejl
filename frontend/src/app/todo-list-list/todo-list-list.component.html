@@ -1,0 +1,15 @@
+<h2>Todo List</h2>
+
+<mat-nav-list>
+  <a *ngFor="todos of todos" mat-list-item
+    (click)="selectedTodo = vinyl"
+    [class.selected]="todo === selectedTodo"
+    [routerLink]="['/todos', todo.id]"
+  >
+    <h3 matLine>{{ todo.title }}</h3>
+    <h3 matLine>{{ todo.owner }} Ft</h3>
+    <h3 matLine>{{ todo.createdAt }}</h3>
+    <h3 matLine>{{ todo.isCompleted }}</h3>
+    <p matLine>{{ todo.content }}</p>
+  </a>
+</mat-nav-list>
