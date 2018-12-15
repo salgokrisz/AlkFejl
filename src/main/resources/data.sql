@@ -1,10 +1,10 @@
 insert into user (username, password, enabled, role) values ('admin', '$2a$10$f7XU0YpDRXxdRl9zO/j4.uFLdFNFm0jx2rTl2untB3TvSqKcVzhYW', true, 'ROLE_ADMIN');
 insert into user (username, password, enabled, role) values ('user', '$2a$10$f7XU0YpDRXxdRl9zO/j4.uFLdFNFm0jx2rTl2untB3TvSqKcVzhYW', true, 'ROLE_USER');
 
-insert into to_do_list (user_id, complete, name, created_at, updated_at) values (1, false, 'issue1', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
-insert into to_do_list (user_id, complete, name, created_at, updated_at) values (1, false, 'issue2', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
-insert into to_do_list (user_id, complete, name, created_at, updated_at) values (2, false, 'issue3', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
-insert into to_do_list (user_id, complete, name, created_at, updated_at) values (2, false, 'issue4', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into to_do_list (user_id, complete, name, progress, created_at, updated_at) values (1, false, 'issue1', 'NEW', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into to_do_list (user_id, complete, name, progress, created_at, updated_at) values (1, false, 'issue2', 'NEW', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into to_do_list (user_id, complete, name, progress, created_at, updated_at) values (2, false, 'issue3', 'NEW', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
+insert into to_do_list (user_id, complete, name, progress, created_at, updated_at) values (2, false, 'issue4', 'NEW', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
 
 insert into list_content (todolist_id, text, created_at, updated_at) values (1, 'message1', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());
 insert into list_content (todolist_id, text, created_at, updated_at) values (1, 'message2', CURRENT_TIMESTAMP(),  CURRENT_TIMESTAMP());

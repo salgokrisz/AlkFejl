@@ -16,28 +16,27 @@ import hu.elte.StickyNotes.repositories.UserRepository;
 @RestController
 @RequestMapping("/users")
 public class UserController {
-	
+
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
-	
+
 	@Autowired
 	private UserRepository userRepository;
-	
+
 	@PostMapping("register")
 	public ResponseEntity<User> register(@RequestBody User user) {
-        Optional<User> oUser = userRepository.findByUsername(user.getUsername());
-        if (oUser.isPresent()) {
-            return ResponseEntity.badRequest().build();
-        }
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setEnabled(true);
-        user.setRole(User.Role.ROLE_USER);
-        return ResponseEntity.ok(userRepository.save(user));
+		Optional<User> oUser = userRepository.findByUsername(user.getUsername());
+		if (oUser.isPresent()) {
+			return ResponseEntity.badRequest().build();
+		}
+		user.setPassword(passwordEncoder.encode(user.getPassword()));
+		user.setEnabled(true);
+		user.setRole(User.Role.ROLE_USER);
+		return ResponseEntity.ok(userRepository.save(user));
 	}
-           
-        
-        @PostMapping("login")
-        public ResponseEntity login(@RequestBody User user) {
-            return ResponseEntity.ok().build();
-        }
+
+	@PostMapping("login")
+	public ResponseEntity<User> login(@RequestBody User user) {
+		return ResponseEntity.ok().build();
+	}
 }
