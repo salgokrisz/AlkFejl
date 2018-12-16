@@ -5,14 +5,20 @@ import 'rxjs/add/operator/toPromise';
 import { httpOptions } from './auth.service';
 import { errorHandler } from '@angular/platform-browser/src/browser';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class TodoService {
-    private baseUrl = 'http://localhost:8080';
+    private baseUrl = 'http://localhost:8080/todos';
 
     constructor(private http: HttpClient){}
 
     getTodos(): Promise<TodoList[]>{
         return this.http.get<TodoList[]>(this.baseUrl, httpOptions).toPromise();
+    }
+
+    getTodo(id: Number): Promise<TodoList> {
+        return this.http.get<TodoList>(`${this.baseUrl}/${id}`, httpOptions).toPromise();
     }
 
     createTodo(todoList: TodoList): Promise<TodoList>{
