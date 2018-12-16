@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Details</h1>
+
+  <div *ngIf="todo">
+    <mat-card>
+      <mat-card-title>{{ todo.name }}</mat-card-title>
+      <mat-card-content>
+        <div *ngFor="let content of todo.listcontent">{{ content.text }}</div>
+      </mat-card-content>
+      <mat-card-actions><a mat-flat-button color="primary" [routerLink]="['/todos', todo.id, 'edit']">Edit</a></mat-card-actions>
+      <mat-card-footer>
+        <mat-chip-list>
+          <mat-chip *ngFor="let label of todo.labels">{{ label.text }}</mat-chip>
+        </mat-chip-list>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

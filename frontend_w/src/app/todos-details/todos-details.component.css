@@ -1,0 +1,8 @@
+mat-card {
+    width: 70%;
+    margin: 0 auto;
+}
+
+mat-card-footer {
+    padding-left: 10px;
+}

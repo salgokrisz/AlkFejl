@@ -1,0 +1,57 @@
+<div class="container">
+  <h2>ToDoLists</h2>
+  <div id="table">
+    <div class="column">
+      <h2>New</h2>
+      <a *ngFor="let item of newTodos" mat-list-item (click)="selectedTodo = item" [routerLink]="['/todos', item.id]">
+        <mat-card>
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <mat-card-footer>
+            <mat-chip-list>
+              <mat-chip *ngFor="let label of item.labels">{{ label.text }}</mat-chip>
+            </mat-chip-list>
+          </mat-card-footer>
+        </mat-card>
+      </a>
+    </div>
+    <div class="column">
+      <h2>In progress</h2>
+      <a *ngFor="let item of inProgressTodos" mat-list-item (click)="selectedTodo = item" [routerLink]="['/todos', item.id]">
+        <mat-card>
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <mat-card-footer>
+            <mat-chip-list>
+              <mat-chip *ngFor="let label of item.labels">{{ label.text }}</mat-chip>
+            </mat-chip-list>
+          </mat-card-footer>
+        </mat-card>
+      </a>
+    </div>
+    <div class="column">
+      <h2>Testing</h2>
+      <a *ngFor="let item of testingTodos" mat-list-item (click)="selectedTodo = item" [routerLink]="['/todos', item.id]">
+        <mat-card>
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <mat-card-footer>
+            <mat-chip-list>
+              <mat-chip *ngFor="let label of item.labels">{{ label.text }}</mat-chip>
+            </mat-chip-list>
+          </mat-card-footer>
+        </mat-card>
+      </a>
+    </div>
+    <div class="column">
+      <h2>Done</h2>
+      <a *ngFor="let item of doneTodos" mat-list-item (click)="selectedTodo = item" [routerLink]="['/todos', item.id]">
+        <mat-card>
+          <mat-card-title>{{ item.name }}</mat-card-title>
+          <mat-card-footer>
+            <mat-chip-list>
+              <mat-chip *ngFor="let label of item.labels">{{ label.text }}</mat-chip>
+            </mat-chip-list>
+          </mat-card-footer>
+        </mat-card>
+      </a>
+    </div>
+  </div>
+</div>

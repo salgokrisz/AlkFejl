@@ -1,0 +1,19 @@
+.column {
+    min-height: 500px;
+    float: left;
+    margin-left: 50px;
+    width: 20%;
+}
+
+#table {
+    width: 100%;
+    margin: 0 auto;
+}
+
+mat-card {
+    margin-bottom: 20px;
+}
+
+mat-card-footer {
+    padding-left: 10px;
+}
