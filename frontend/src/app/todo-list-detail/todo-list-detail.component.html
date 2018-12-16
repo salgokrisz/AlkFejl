@@ -1,0 +1,16 @@
+<h1>Details</h1>
+
+<dl *ngIf="vinyl">
+  <dt>Title</dt>
+  <dd>{{todoList.title}}</dd>
+  <dt>Owner</dt>
+  <dd>{{todoList.owner}}</dd>
+  <dt>Time of creation</dt>
+  <dd>{{todoList.createdAt}}</dd>
+  <dt>Content</dt>
+  <dd>{{todoList.content}}</dd>
+</dl>
+
+<p>
+<a mat-flat-button color="warn" [routerLink]="['/todos', 'todoList.id', 'edit']">Edit</a>
+</p>
