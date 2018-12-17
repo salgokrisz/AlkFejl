@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import hu.elte.StickyNotes.entities.ListContent;
 import java.util.Optional;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,11 +27,13 @@ public class ListContentController {
     @Autowired
     private ListContentRepository listContentRepository;
     
+    @CrossOrigin
     @GetMapping("")
     public ResponseEntity<Iterable<ListContent>> getAll() {
         return ResponseEntity.ok(listContentRepository.findAll());
     }
     
+    @CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<ListContent> get(@PathVariable Integer id) {
         Optional<ListContent> message = listContentRepository.findById(id);
@@ -41,12 +44,14 @@ public class ListContentController {
         }
     }
     
+    @CrossOrigin
     @PostMapping("")
     public ResponseEntity<ListContent> post(@RequestBody ListContent message) {
         ListContent savedMessage = listContentRepository.save(message);
         return ResponseEntity.ok(savedMessage);
     }
     
+    @CrossOrigin
     @PutMapping("/{id}")
     public ResponseEntity<ListContent> update
             (@PathVariable Integer id,
@@ -60,6 +65,7 @@ public class ListContentController {
         }
     }
             
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public ResponseEntity<ListContent> delete
             (@PathVariable Integer id) {

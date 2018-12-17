@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import hu.elte.StickyNotes.entities.ToDoList;
 import hu.elte.StickyNotes.repositories.ToDoListRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,12 +28,14 @@ public class ToDoListContoller {
     @Autowired
     private ToDoListRepository toDoListRepository;
     
+    @CrossOrigin
     @GetMapping("")
     public ResponseEntity<Iterable<ToDoList>> getAll() {
         return ResponseEntity.ok(toDoListRepository.findAll());
     }
     
-     @GetMapping("/{id}")
+    @CrossOrigin
+    @GetMapping("/{id}")
     public ResponseEntity<ToDoList> get(@PathVariable Integer id) {
         Optional<ToDoList> toDoList = toDoListRepository.findById(id);
         if (toDoList.isPresent()) {
@@ -42,6 +45,7 @@ public class ToDoListContoller {
         }
     }
     
+    @CrossOrigin
     @PostMapping("")
     public ResponseEntity<ToDoList> post(@RequestBody ToDoList toDoList) {
         toDoList.getListcontent().stream().forEach(c -> c.setTodolist(toDoList));
@@ -49,7 +53,8 @@ public class ToDoListContoller {
         return ResponseEntity.ok(savedToDoList);
     }
     
-     @PutMapping("/{id}")
+    @CrossOrigin
+    @PutMapping("/{id}")
     public ResponseEntity<ToDoList> put(@RequestBody ToDoList toDoList, @PathVariable Integer id) {
         Optional<ToDoList> oToDoList = toDoListRepository.findById(id);
         if (oToDoList.isPresent()) {
@@ -60,6 +65,7 @@ public class ToDoListContoller {
         }
     }
     
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable Integer id) {
         Optional<ToDoList> oToDoList = toDoListRepository.findById(id);

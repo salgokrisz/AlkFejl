@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import hu.elte.StickyNotes.entities.User;
 import hu.elte.StickyNotes.repositories.UserRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @RequestMapping("/users")
@@ -23,6 +24,7 @@ public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 
+        @CrossOrigin
 	@PostMapping("register")
 	public ResponseEntity<User> register(@RequestBody User user) {
 		Optional<User> oUser = userRepository.findByUsername(user.getUsername());
@@ -35,6 +37,7 @@ public class UserController {
 		return ResponseEntity.ok(userRepository.save(user));
 	}
 
+        @CrossOrigin
 	@PostMapping("login")
 	public ResponseEntity<User> login(@RequestBody User user) {
 		return ResponseEntity.ok().build();

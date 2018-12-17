@@ -5,6 +5,7 @@ import hu.elte.StickyNotes.repositories.LabelRepository;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,12 +25,14 @@ public class LabelController {
     @Autowired
     private LabelRepository labelRepository;
     
+    @CrossOrigin
     @GetMapping("")
     public ResponseEntity<Iterable<Label>> getAll() {
         return ResponseEntity.ok(labelRepository.findAll());
     }
     
-        @GetMapping("/{id}")
+    @CrossOrigin
+    @GetMapping("/{id}")
     public ResponseEntity<Label> get(@PathVariable Integer id) {
         Optional<Label> label = labelRepository.findById(id);
         if (label.isPresent()) {
@@ -39,12 +42,14 @@ public class LabelController {
         }
     }
     
+    @CrossOrigin
     @PostMapping("")
     public ResponseEntity<Label> post(@RequestBody Label label) {
         Label savedLabel = labelRepository.save(label);
         return ResponseEntity.ok(savedLabel);
     }
     
+    @CrossOrigin
     @PutMapping("/{id}")
     public ResponseEntity<Label> put(@RequestBody Label label, @PathVariable Integer id) {
         Optional<Label> oLabel = labelRepository.findById(id);
@@ -56,6 +61,7 @@ public class LabelController {
         }
     }
     
+    @CrossOrigin
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable Integer id) {
         Optional<Label> oLabel = labelRepository.findById(id);
