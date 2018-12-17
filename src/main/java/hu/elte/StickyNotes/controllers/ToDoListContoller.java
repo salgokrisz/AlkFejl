@@ -44,6 +44,7 @@ public class ToDoListContoller {
     
     @PostMapping("")
     public ResponseEntity<ToDoList> post(@RequestBody ToDoList toDoList) {
+        toDoList.getListcontent().stream().forEach(c -> c.setTodolist(toDoList));
         ToDoList savedToDoList = toDoListRepository.save(toDoList);
         return ResponseEntity.ok(savedToDoList);
     }

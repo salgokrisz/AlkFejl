@@ -22,6 +22,8 @@ import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -62,6 +64,7 @@ public class ToDoList {
     @UpdateTimestamp
     private LocalDateTime updated_at;
     
+    @Cascade(CascadeType.ALL)
     @OneToMany(mappedBy = "todolist")
     private List<ListContent> listcontent;
     
